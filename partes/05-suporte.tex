@@ -1,0 +1,241 @@
+\part{Armas de Suporte e Táticas Avançadas}
+
+\section{Armas Especiais e Equipes de Suporte}
+
+Além dos rifles e SMGs padrão, Vanguarda 44 utiliza armas especiais que podem estar integradas a um Esquadrão de Infantaria (LMG, Bazooka) ou operar como Unidades de Suporte independentes (HMG, Sniper). Todas compartilham um traço em comum: são operadas por equipes pequenas, onde a perda de um auxiliar enfraquece --- mas nunca silencia --- a arma.
+
+\subsection{Metralhadora Leve (LMG --- Bipé)}
+
+Integrada ao Esquadrão de Infantaria. Ativada junto com o resto da unidade, usando o PC do Sargento.
+
+\textbf{Estacionário (Ordem de Fogo)}: se o esquadrão não se moveu, a LMG dispara com potencial total e alcance total.
+
+\textbf{Em Movimento (Ordem de Avançar)}: se o esquadrão se moveu, a LMG sofre -1 no Teste de Acerto (igual aos rifles).
+
+\subsection{Bazooka / Panzerschreck (Anti-Tanque)}
+
+Integrada ao Esquadrão de Infantaria.
+
+\textbf{Restrição de Movimento}: armas ``Pesadas'' NÃO PODEM disparar se a unidade se moveu neste turno.
+
+O Sargento escolhe: correr para cobertura OU disparar a Bazooka. Não dá para fazer os dois no mesmo turno.
+
+Contra veículos, a Bazooka usa o perfil padrão de Penetração (Pen) vs. Proteção (Prot) descrito na Sequência de Disparo (Parte III).
+
+\subsection{Bazooka contra Infantaria (Poder de Fogo Explosivo)}
+
+Além de sua função Anti-Tanque, a equipe de Bazooka/Panzerschreck pode direcionar seu disparo contra infantaria, usando um perfil simplificado de dano de área --- em vez da Sequência de Disparo padrão da Parte III, resolve-se com uma única rolagem de Acerto seguida de uma única rolagem de Dano:
+
+\textbf{Acerto}: role 1D6. Um resultado de 4, 5 ou 6 acerta o alvo.
+
+\textbf{Dano}: se acertou, role 1D6 novamente. Resultado 1, 2 ou 3: mata 1 soldado. Resultado 4, 5 ou 6: mata 2 soldados, desde que haja pelo menos um segundo soldado inimigo a até 5cm do alvo original (efeito de estilhaço). Se não houver um segundo alvo dentro de 5cm, mata apenas 1 soldado.
+
+\begin{nota}
+Este perfil é uma alternativa mais letal e mais aleatória que o tiro de fuzil comum --- reflete o efeito de uma carga explosiva contra um grupo de soldados, mas não substitui a função Anti-Tanque da arma contra veículos.
+\end{nota}
+
+\subsection{Regra Geral --- Perda do Assistente (Equipes Pequenas)}
+\label{sec:perda-assistente}
+
+Muitas armas de suporte do jogo são operadas por equipes pequenas de 2 ou 3 homens, onde um modelo é o Operador principal (quem efetivamente dispara) e os demais são Assistentes (Municiador, Observador, Carregador). Esta regra se aplica a todas elas: Metralhadora Leve (LMG/BAR), Bazooka/Panzerschreck, Metralhadora Pesada (HMG), Equipe de Sniper, e Morteiros (Leve e Pesado).
+
+Sempre que TODOS os Assistentes de uma equipe forem removidos como baixa, restando apenas o Operador principal, aplique a Penalidade de Operação Solo, válida enquanto a equipe permanecer incompleta:
+
+\textbf{Disparo}: a arma continua disparando normalmente todo turno --- nunca para de atirar por falta de tripulação.
+
+\textbf{Penalidade no Acerto}: -1 permanente no Teste de Acerto (empilha com outras penalidades).
+
+\textbf{Penalidade de Movimento}: a unidade não pode mais receber a ordem Avançar (mover e atirar no mesmo turno). Deve escolher entre Atirar (parada, sofrendo a penalidade acima) ou Correr (sem atirar, para se reposicionar). Se a arma já não podia mover e atirar (armas Pesadas, Morteiro Pesado), esta cláusula simplesmente não se aplica --- ela já era estacionária.
+
+\textbf{Habilidades Especiais}: qualquer habilidade que dependa do Assistente (o Reroll do Observador de Sniper, o Ajuste de Mira facilitado pelo Observador do Morteiro, etc.) deixa de funcionar enquanto a equipe estiver incompleta.
+
+\begin{nota}
+Na prática, isso força uma escolha tática real toda vez que um Assistente cai: manter a arma atirando (pior, mas presente) ou sacrificar o turno de tiro para reposicionar a arma em segurança. As regras específicas de cada arma (14.5, 14.6, 18) remetem a esta seção em vez de repetir o texto.
+\end{nota}
+
+\subsection{Metralhadora Pesada (HMG)}
+
+A HMG é uma Unidade de Suporte independente --- não faz parte de um Esquadrão de Infantaria --- composta por 2 homens: o Atirador e o Municiador. Funciona como a âncora de uma linha de defesa, montada sobre tripé.
+
+\textbf{Poder de Negação}: sempre que a HMG acertar uma unidade inimiga, aquela unidade recebe 2 Marcadores de Stress automaticamente (regra de Supressão, veja Parte III), independentemente de sofrer baixas ou não.
+
+\textbf{Arco de Fogo}: uma vez posicionada, a HMG cobre um arco de 45 graus. Para girar além desse arco, é necessário gastar 1 PC adicional para ``Reposicionar''.
+
+\textbf{Ativação}: como não possui um Sargento próprio, a HMG depende da Estrutura de Comando (Parte VI) para ser ativada com eficiência total, ou pode atirar de forma Autônoma sofrendo a penalidade padrão de -1.
+
+\textbf{Perda do Municiador}: segue a Regra Geral de Perda do Assistente (\ref{sec:perda-assistente}).
+
+\subsection{Equipe de Sniper}
+
+A Equipe de Sniper é uma Unidade de Suporte independente composta por 2 homens: o Atirador (fuzil de precisão) e o Observador. Sua função é eliminar alvos de alto valor --- Sargentos, Municiadores, Operadores de Rádio --- a distâncias que nenhuma outra arma de infantaria alcança.
+
+\textbf{Alcance}: 100cm. A Equipe de Sniper ignora a penalidade de Longa Distância (treinamento especializado).
+
+\textbf{Movimento}: se a equipe se mover neste turno, ela sofre -2 no Teste de Acerto (em vez do -1 padrão de Avançar), pois o tiro de precisão exige estabilidade.
+
+\subsubsection{Tiro Normal}
+
+A Equipe de Sniper pode atirar contra qualquer alvo válido usando a Sequência de Disparo padrão (Parte III) normalmente, com 1 dado de ataque.
+
+\subsubsection{Tiro Selecionado (Regra Especial)}
+
+Em vez de atirar no soldado mais exposto, o jogador pode escolher qualquer miniatura inimiga visível como alvo --- incluindo Sargentos, Oficiais, Municiadores, Operadores de Rádio ou Médicos.
+
+\textbf{Acerto}: role 1D6. É necessário 5+ para acertar (mira mais difícil e demorada), aplicando os modificadores normais de cobertura.
+
+\textbf{Dano}: se acertar, é morte instantânea. Ignora a Jogada de Dano padrão e ignora a tentativa de Salvamento do Médico.
+
+\subsubsection{O Observador}
+
+Enquanto o Observador estiver vivo e a até 2,5cm do Atirador, a Equipe pode rolar novamente 1 dado de Acerto perdido por turno (Tiro Normal ou Tiro Selecionado).
+
+\textbf{Perda do Observador}: segue a Regra Geral de Perda do Assistente (\ref{sec:perda-assistente}) --- a Equipe sofre -1 permanente no Acerto (empilhando com o TN de 5+ do Tiro Selecionado) e perde o Reroll.
+
+\begin{nota}
+Um Sniper com Observador vivo mirando um Sargento em Cobertura Pesada precisa de 5+2 = 7, ou seja, só acerta com um 6 natural mais o reroll do Observador --- é difícil por design; o valor do Sniper está em escolher o alvo certo, não em acertar sempre.
+\end{nota}
+
+\section{Fogo Dividido (Split Fire)}
+
+Embora um Esquadrão geralmente atue contra um único alvo para maximizar o volume de fogo, armas especializadas permitem dividir a atenção da unidade.
+
+\textbf{Declaração}: antes de rolar qualquer dado, o jogador anuncia claramente quais armas atiram em quais alvos (ex.: ``A Bazooka dispara contra o Panzer IV, o restante dos Fuzileiros dispara contra a Infantaria'').
+
+\textbf{Restrição de Arco}: ambos os alvos devem estar no Arco Frontal (90°) da unidade.
+
+\textbf{Resolução Independente}: os ataques são resolvidos separadamente.
+
+\textbf{Nota sobre o Municiador}: o Municiador da arma Anti-Tanque está ocupado e NÃO dispara seu rifle durante o Fogo Dividido.
+
+\textbf{Custo}: gasta-se apenas 1 PC (do Sargento) para toda a ação.
+
+\subsection{Fogo Dividido Expandido (Múltiplas Ameaças)}
+
+Esquadrões com mais de uma Arma de Suporte Integrada (múltiplas LMGs ou Bazookas) podem engajar múltiplos alvos simultaneamente, ao custo de 1 PC único:
+
+\begin{itemize}[leftmargin=1.2cm]
+  \item Cada Arma Especial pode escolher um alvo diferente, desde que esteja no arco de visão frontal.
+  \item Os Fuzileiros comuns não podem dividir o fogo entre si --- todos atiram juntos no mesmo alvo (o da LMG 1, da LMG 2, ou um terceiro alvo independente).
+  \item Marcadores de Stress são aplicados individualmente a cada unidade inimiga atingida.
+\end{itemize}
+
+\section{Fogo e Movimento (Split Action)}
+
+Esquadrões veteranos sabem coordenar suas ações para que uma parte forneça cobertura enquanto a outra avança --- a clássica tática de ``Fire and Maneuver''.
+
+\subsection{Como Declarar}
+
+Ao ativar o Esquadrão (gastando 1 PC), o jogador pode declarar a ordem especial ``Fogo e Movimento'', dividindo o esquadrão verbalmente em dois elementos:
+
+\textbf{Elemento de Base (Fogo)}: geralmente a LMG/BAR e 1-2 fuzileiros. Ficam parados.
+
+\textbf{Elemento de Manobra (Assalto)}: o Sargento e o restante. Se movem.
+
+\subsection{Execução}
+
+\textbf{Fase de Tiro da Base}: o Elemento de Base dispara primeiro, contando como Estacionário (força total, sem penalidade).
+
+\textbf{Fase de Movimento da Manobra}: o Elemento de Manobra realiza seu movimento (15cm).
+
+\textbf{Fase de Tiro da Manobra}: o Elemento de Manobra dispara, sofrendo a penalidade normal de movimento (exceto SMGs).
+
+\subsection{Coesão Estendida (A Regra do Elástico)}
+
+Para evitar que o esquadrão se separe em duas unidades independentes, a distância entre o soldado mais avançado do Elemento de Base e o soldado mais recuado do Elemento de Manobra não pode exceder 15cm ao final do turno.
+
+\begin{nota}
+Se o esquadrão terminar o turno mais espalhado do que isso, a unidade perde a comunicação: recebe 1 Marcador de Stress automático e é obrigada a usar sua próxima ação para se reunir.
+\end{nota}
+
+\section{Granadas de Mão}
+
+Granadas são ferramentas de curto alcance usadas para desalojar inimigos entrincheirados. Combinam um efeito de dano de área com forte Supressão.
+
+\subsection{Restrições de Uso}
+
+Apenas 1 miniatura por Esquadrão pode lançar granada por turno, substituindo seu tiro de rifle.
+
+\textbf{Alcance}: muito curto, 15cm.
+
+\textbf{Alvo}: só pode ser usada contra inimigos em Cobertura Pesada (edifícios, muros, trincheiras).
+
+\subsection{A Mecânica}
+
+\textbf{Teste de Arremesso}: role 1D6. 4+ acerta (ignora modificadores de cobertura).
+
+\textbf{Se Acertar --- Dano}: role 1D6 novamente. Resultado 1, 2 ou 3: mata 1 soldado. Resultado 4, 5 ou 6: mata 2 soldados, desde que haja pelo menos um segundo soldado inimigo a até 5cm do alvo original (efeito de estilhaço). Se não houver um segundo alvo dentro de 5cm, mata apenas 1 soldado.
+
+\textbf{Se Acertar --- Supressão}: além do dano, a unidade recebe 1D3 Marcadores de Stress (role 1D6: 1-2 = 1 Pin, 3-4 = 2 Pins, 5-6 = 3 Pins), independentemente de quantos soldados tenham morrido.
+
+\begin{nota}
+Este é o mesmo perfil de dano de área usado pela Bazooka contra infantaria (Parte V, seção 14.3) --- uma única rolagem de Acerto seguida de uma única rolagem de Dano, sem passar pela Sequência de Disparo padrão da Parte III.
+\end{nota}
+
+\section{Morteiros e Artilharia de Campo}
+
+Diferente das armas de tiro direto, os morteiros disparam em arco alto, atingindo inimigos totalmente escondidos atrás de prédios, colinas ou muros.
+
+\subsection{Ajuste de Mira (Zeroing In)}
+
+Morteiros raramente acertam no primeiro tiro; precisam ``caminhar'' os disparos até o alvo.
+
+Coloque um Marcador de Mira ao lado do alvo quando ele for disparado pela primeira vez.
+
+\textbf{1º Disparo}: precisa de 6 para acertar.
+
+\textbf{2º Disparo} (se o alvo não se moveu): precisa de 5+.
+
+\textbf{3º Disparo em diante} (se o alvo não se moveu): precisa de 4+.
+
+\textbf{Reset}: se o alvo se mover, o Marcador de Mira é removido e o processo reinicia (precisa de 6 novamente).
+
+\subsection{Tiro Indireto}
+
+Morteiros podem disparar contra alvos que não conseguem ver, desde que uma unidade amiga qualquer (o Observador) consiga ver o alvo. O morteiro pode ficar totalmente protegido atrás de um obstáculo, disparando por cima dele.
+
+\subsection{Tipos de Morteiro}
+
+\begin{center}
+\begin{tabular}{p{2.2cm}p{1.8cm}p{2.8cm}p{3.2cm}p{3.2cm}}
+\toprule
+Tipo & Tripulação & Alcance & Movimento & Dano (se acertar) \\
+\midrule
+Leve & 2 Homens & Mín. 30cm -- Máx. 60cm & Pode mover e atirar (1º tiro com -1) & 1D3 Acertos, gera 1 Pin \\
+Pesado / Médio & 3 Homens & Mín. 50cm -- Máx. Infinito & Fixo --- se mover, não atira & 1D6 Acertos, gera 2 Pins \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{nota}
+O dano de morteiro sempre ignora a Cobertura do alvo --- o projétil vem de cima.
+\end{nota}
+
+\begin{nota}
+\textbf{Perda de Tripulação}: se a equipe do morteiro perder todos os seus Assistentes (restando só o Atirador), aplique a Regra Geral de Perda do Assistente (\ref{sec:perda-assistente}). Para o Morteiro Pesado, que já é fixo, apenas a penalidade de -1 no Acerto se aplica --- ele já não se movia mesmo.
+\end{nota}
+
+\subsection{Munição de Fumaça}
+
+Uma vez por jogo, qualquer morteiro pode disparar uma cortina de fumaça em vez de explosivos. Escolha um ponto na mesa e role para acertar (regra de Ajuste de Mira). Se acertar, coloque um marcador de fumaça de 10cm de diâmetro naquele ponto --- nenhuma unidade pode traçar Linha de Visão através dele.
+
+\section{Combate em Edificações e Ocupação Parcial}
+
+\subsection{Ocupação Parcial (Regra da Porta e Janela)}
+
+Um Esquadrão pode estar dividido entre o interior e o exterior de um edifício, desde que mantenha a Coesão de Unidade: as miniaturas do lado de fora devem estar a no máximo 2,5cm de uma porta ou janela aberta onde estão os companheiros de dentro.
+
+\textbf{Cobertura Mista}: se a maioria (6 ou mais) estiver dentro, a unidade inteira conta como em Cobertura Pesada. Se a maioria estiver fora, conta como Cobertura Leve ou Aberto. Em empate, o defensor escolhe.
+
+\textbf{Remoção de Baixas}: se o inimigo causar baixas, o jogador DEVE remover primeiro as miniaturas do lado de fora (as mais expostas).
+
+\subsection{A Aresta de Disparo (Active Edge)}
+
+Qualquer miniatura em contato de base ou a até 2,5cm de uma abertura (janela, porta) ou esquina de parede é considerada como tendo Linha de Visão através dela. O jogador mede a Linha de Visão e o Alcance a partir da abertura/esquina, e não da cabeça da miniatura.
+
+\subsection{Proteção e Ponto Cego}
+
+Estar dentro de uma ruína ou edifício confere Cobertura Pesada (-2) contra disparos de fora.
+
+\textbf{Exceção}: armas com a regra ``Explosão'' (HE) ignoram o bônus de cobertura se o centro da explosão acertar dentro do edifício ou perto da abertura.
+
+\textbf{Ponto Cego}: miniaturas em andares superiores não podem disparar contra inimigos a menos de 5cm da base do edifício no térreo.

@@ -1,0 +1,81 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{estilo/vanguarda44}[2026/07/13 Estilo Vanguarda 44]
+
+% Nota: o pacote babel com suporte a portugues/brazilian nao esta disponivel
+% neste ambiente de compilacao (falta o pacote babel-portuges do CTAN).
+% Usamos apenas inputenc/fontenc para acentuacao; a hifenizacao correta em
+% portugues pode ser adicionada depois instalando babel-portuges via tlmgr.
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[a4paper,margin=2.4cm]{geometry}
+\RequirePackage{xcolor}
+\RequirePackage{booktabs}
+\RequirePackage{longtable}
+\RequirePackage{array}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\RequirePackage{hyperref}
+\RequirePackage{fancyhdr}
+
+% Cores tematicas (mesmas cores dos suportes de base do jogo)
+\definecolor{vinho}{RGB}{106,20,30}
+\definecolor{mostarda}{RGB}{176,141,42}
+\definecolor{laranja}{RGB}{201,106,32}
+\definecolor{cinzachumbo}{RGB}{45,45,48}
+\definecolor{papel}{RGB}{250,248,242}
+
+% Formatacao de titulos de Parte / Secao
+\titleformat{\part}[block]
+  {\clearpage\centering\bfseries\color{vinho}\Huge}
+  {\color{mostarda}\Large PARTE \thepart\\[6pt]}
+  {0pt}
+  {}
+\titleformat{\section}
+  {\bfseries\color{vinho}\Large}
+  {\thesection}
+  {8pt}
+  {}
+\titleformat{\subsection}
+  {\bfseries\color{cinzachumbo}\large}
+  {\thesubsection}
+  {6pt}
+  {}
+\titleformat{\subsubsection}
+  {\bfseries\color{cinzachumbo}\normalsize}
+  {\thesubsubsection}
+  {6pt}
+  {}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{cinzachumbo}Vanguarda 44 --- Livro de Regras}
+\fancyhead[R]{\small\color{cinzachumbo}\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Caixa de "Nota" reutilizada em todo o livro
+\newtcolorbox{nota}{
+  breakable,
+  colback=papel,
+  colframe=mostarda,
+  boxrule=0.6pt,
+  arc=1pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\bfseries,
+  title=Nota
+}
+
+\newcommand{\vsection}[1]{\section{#1}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=vinho,
+  citecolor=vinho,
+  urlcolor=vinho,
+  pdftitle={Vanguarda 44 -- Livro de Regras},
+  pdfauthor={Felipe Ramires Terrazas}
+}
+
+\endinput

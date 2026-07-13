@@ -1,0 +1,123 @@
+\part{Combate}
+
+\section{Sequência de Disparo}
+
+O combate à distância é resolvido inteiramente pelo jogador Atacante em duas etapas rápidas. O Defensor não realiza jogadas de ``esquiva'', confiando apenas em sua Cobertura e no Treinamento de suas tropas --- o mesmo princípio usado no Bolt Action.
+
+\subsection{Passo A: Jogada de Acerto (Balística)}
+
+O atacante reúne seu Pool de Dados e rola. O valor base para acertar é 4+. Aplique os modificadores abaixo:
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Situação & Modificador \\
+\midrule
+Alvo em Campo Aberto & 0 (permanece 4+) \\
+Alvo em Cobertura Leve & -1 (precisa de 5+) \\
+Alvo em Cobertura Pesada & -2 (precisa de 6+) \\
+Atirador Moveu-se (Rifles/LMGs) & -1 na dificuldade \\
+Longa Distância (> metade do alcance) & -1 na dificuldade \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{nota}
+Um resultado natural de 6 no dado é sempre um acerto crítico, ignorando modificadores. Um resultado natural de 1 é sempre falha.
+\end{nota}
+
+\subsection{Passo B: Jogada de Dano (Letalidade)}
+
+Separe os dados que conseguiram acertar no Passo A. Role-os novamente para determinar o efeito. O valor necessário depende da qualidade da tropa alvo:
+
+\begin{itemize}[leftmargin=1.2cm]
+  \item \textbf{Alvo Inexperiente (Conscript)}: sofre baixa com 3+.
+  \item \textbf{Alvo Regular (Soldado Padrão)}: sofre baixa com 4+.
+  \item \textbf{Alvo Veterano (Elite/Oficiais)}: sofre baixa com 5+.
+\end{itemize}
+
+Contra veículos, o TN de dano depende do valor de Penetração (Pen) da arma versus o valor de Proteção (Prot) do alvo: role 1D6, some o Pen da arma e subtraia o Prot do veículo. Um resultado de 1 ou mais é um ferimento.
+
+\subsection{Passo C: Resolução}
+
+\textbf{Baixas}: para cada sucesso no Passo B, o defensor remove uma miniatura (sua escolha).
+
+\textbf{Médico}: se houver um médico na unidade ou próximo dela, tente o salvamento agora (veja Parte IV, Médico de Combate).
+
+\textbf{Aplicação de Stress}: se a unidade sofreu pelo menos 1 acerto (mesmo sem causar baixa), ela recebe 1 Marcador de Stress. Armas com a regra ``Supressão'' (LMG/HMG) causam 2 Marcadores.
+
+\section{Combate Corpo a Corpo (CQC)}
+
+O CQC ocorre quando uma unidade executa uma ordem Avançar ou Correr bem-sucedida para entrar em contato base a base com uma unidade inimiga.
+
+\textbf{Ataque}: ambos os lados rolam 2D6 mais um D6 para cada modelo na unidade.
+
+\textbf{Acertos}: o número base necessário para um acerto é 4+.
+
+\textbf{Ferimentos}: os acertos são imediatamente aplicados como ferimentos. Não há defesas no CQC.
+
+\textbf{Resultado}: o lado que causou mais ferimentos vence o combate. O lado perdedor é destruído, e o vencedor pode consolidar 2cm.
+
+\section{Moral e Supressão (Sistema de Pins)}
+
+No campo de batalha, o medo de morrer é tão impactante quanto o ferimento físico. Vanguarda 44 representa isso através de Marcadores de Stress (Pins).
+
+\subsection{Recebendo Stress}
+
+\textbf{1 Pin}: se a unidade for atingida por disparos de Armas Leves (Rifles, Pistolas, SMG) e sofrer pelo menos 1 acerto.
+
+\textbf{2 Pins}: se a unidade for atingida por Armas de Suporte (LMG, HMG) ou Armas Explosivas (HE --- tanques, bazucas, morteiros).
+
+\begin{nota}
+Os marcadores são cumulativos. Uma unidade pode acumular vários Pins ao longo dos turnos se não for reorganizada.
+\end{nota}
+
+\subsection{Efeitos do Stress}
+
+\textbf{Precisão}: a unidade sofre -1 no Teste de Acerto para cada Pin que possuir.
+
+\textbf{Verificação de Moral (Ordem)}: para ativar uma unidade com Pins, o jogador deve primeiro lançar 2D6. O resultado deve ser igual ou menor que a Moral da unidade (veja tabela abaixo) subtraída do número de Pins.
+
+\textbf{Sucesso}: a unidade remove 1 Pin automaticamente e age normalmente (ainda sofrendo penalidade de tiro pelos Pins restantes).
+
+\textbf{Falha}: a unidade entra em estado ``Cabeça Baixa'' (Down). Ganha defesa extra, mas não pode mover ou atirar neste turno.
+
+\subsection{Colapso (Fuga)}
+
+Se em qualquer momento o número de Pins de uma unidade igualar ou exceder o seu valor base de Moral, a unidade entra em pânico e é removida da mesa.
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Qualidade da Tropa & Valor de Moral Base & Foge com... \\
+\midrule
+Inexperiente (Volkssturm) & 8 & 8 Pins \\
+Regular (Heer / US Army) & 9 & 9 Pins \\
+Veterano (Paraquedistas / SS) & 10 & 10 Pins \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Recuperação de Stress (Rally)}
+
+Existem três maneiras de uma unidade recuperar a compostura e remover Marcadores de Stress.
+
+\subsection{A Ordem ``Recuperar'' (Rally)}
+
+\textbf{Custo}: 1 PC do Sargento (ou de um Tenente próximo).
+
+\textbf{Ação}: a unidade NÃO se move e NÃO atira neste turno.
+
+\textbf{Resolução}: role 1D6. O resultado é o número de Marcadores de Stress removidos imediatamente. A unidade também deixa o estado Abaixar, se estiver nele.
+
+\subsection{Bravura sob Fogo}
+
+Se a unidade tiver Stress mas o jogador decidir dar uma ordem de Tiro ou Movimento (em vez de Recuperar), e o Teste de Moral for bem-sucedido, remova 1 Marcador de Stress antes de realizar a ação.
+
+\subsection{Intervenção do Oficial}
+
+O Tenente pode gastar 1 dos seus PC para ordenar ``Recuperar'' a uma unidade a até 15cm de distância, seguindo as regras de 9.1. Útil quando o Sargento da unidade morreu.
+
+\begin{nota}
+Com 1 ou 2 Pins, vale a pena arriscar e atirar (se passar no teste, remove 1 Pin de graça). Com 3+ Pins, geralmente compensa mais gastar o turno reagrupando.
+\end{nota}

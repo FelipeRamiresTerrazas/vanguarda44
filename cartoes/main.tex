@@ -1,0 +1,195 @@
+\documentclass[10pt]{article}
+\usepackage{estilo/cartoes}
+
+\hypersetup{
+  pdftitle={Vanguarda 44 -- Cartoes de Referencia Rapida},
+  pdfauthor={Felipe Ramires Terrazas},
+}
+
+\begin{document}
+
+% ------------------------------------------------------------------
+% Folha 1 -- Cartoes 1 a 4
+% ------------------------------------------------------------------
+\begin{cardpage}
+
+\cardcell{0}{297}{1}{TURNO \& ORDENS}{
+\textbf{Fase 1 -- Sorteio:} cada unidade não fixada tem 1 Dado de Ordem no saco.
+
+\textbf{Fase 2 -- Ativação:} sorteia 1 dado; aquele jogador ativa 1 unidade sua ainda sem ordem (1 PC = 1 ativação).
+
+\textbf{Fase 3 -- Fim de Turno:} remove os dados de ordem (exceto os em Abaixar).
+
+\textbf{Ordens:}
+\begin{itemize}
+\item \textbf{Avançar} -- move e atira com -1
+\item \textbf{Correr} -- move o dobro, não atira
+\item \textbf{Atirar} -- parado, força total
+\item \textbf{Reagrupar} -- não move/atira, 1D6 = Pins removidos
+\item \textbf{Emboscada} -- espera reação do inimigo
+\item \textbf{Abaixar} -- defesa máxima, não move/atira
+\end{itemize}
+
+\textbf{Teste de Ordem:} 1D6 $\geq$ TN (3+ base, +1 por Pin). Falha: vai para Abaixar, não ativa de novo neste turno.
+
+\textbf{Comando:}
+\begin{itemize}
+\item Mostarda = Sargento (1 PC)
+\item Vinho = Tenente (2 PC)
+\item Laranja = Capitão (3 PC)
+\item Major = 4 PC \quad General = 6 PC
+\end{itemize}
+}
+
+\cardcell{105}{297}{2}{MOVIMENTO \& TERRENO}{
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Tipo} & \textbf{Avançar} & \textbf{Correr}\\
+\midrule
+Infantaria & 15cm & 30cm\\
+Veíc. Rodado & 25cm & 50cm\\
+Veíc. Esteira & 20cm & 40cm\\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\textbf{Terreno:}
+\begin{itemize}
+\item \textbf{Difícil} (bosque/lama) -- infantaria não corre (máx 15cm), veículo de rodas não entra, esteira não corre e rola 1D6 (1 = atola).
+\item \textbf{Estrada} -- infantaria +5cm na corrida, veículo dobra o movimento, mas nunca conta como cobertura (kill zone).
+\item \textbf{Obstáculo} (cerca/muro) -- infantaria perde 5cm para atravessar; tanques destroem muros, outros veículos passam cercas sem penalidade.
+\end{itemize}
+}
+
+\cardcell{0}{149}{3}{SEQUÊNCIA DE DISPARO}{
+\textbf{Passo A -- Acerto (base 4+):}
+\begin{itemize}
+\item Campo Aberto: 0 (4+)
+\item Cobertura Leve: -1 (5+)
+\item Cobertura Pesada: -2 (6+)
+\item Bunker: -3
+\item Atirador moveu: -1
+\item Longa distância: -1 (cumulativos)
+\end{itemize}
+6 natural = acerto crítico (ignora mods). 1 natural = falha sempre.
+
+\textbf{Passo B -- Dano} (só quem acertou):
+Inexperiente 3+; Regular 4+; Veterano 5+.
+
+Veículo: D6 + Pen da arma - Prot do alvo $\geq$1 fere.
+
+\textbf{Passo C -- Stress:}
+1+ acerto sofrido = 1 Pin. Armas de Supressão (LMG/HMG) = 2 Pins.
+}
+
+\cardcell{105}{149}{4}{CQC \& MORAL (PINS)}{
+\textbf{Corpo a Corpo:} ambos rolam 2D6 + 1D6/modelo na unidade. Acerto 4+, ferimento direto, sem save. Quem causar mais ferimentos vence; perdedor destruído; vencedor consolida 2cm.
+
+\textbf{Recebendo Stress:} 1 Pin se atingido por arma leve (rifle/pistola/SMG); 2 Pins se atingido por LMG/HMG/HE (morteiro, tanque, bazuca).
+
+\textbf{Efeitos:} -1 no Acerto por cada Pin. Ativar com Pins: 2D6 $\leq$ Moral - Pins. Falha: unidade vai para Abaixar.
+
+\textbf{Tabela Moral:}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Qualidade} & \textbf{Foge com}\\
+\midrule
+Inexperiente & 8 Pins\\
+Regular & 9 Pins\\
+Veterano & 10 Pins\\
+\bottomrule
+\end{tabular}
+}
+
+\end{cardpage}
+
+% ------------------------------------------------------------------
+% Folha 2 -- Cartoes 5 a 8
+% ------------------------------------------------------------------
+\begin{cardpage}
+
+\cardcell{0}{297}{5}{RECUPERAÇÃO DE STRESS}{
+\begin{itemize}
+\item \textbf{Ordem Recuperar (Rally):} custo 1 PC do Sargento (ou Tenente perto); não move/atira; role 1D6 = Pins removidos; sai do Abaixar.
+\item \textbf{Bravura sob Fogo:} unidade com Pins tenta Tiro/Movimento normalmente; se passar no Teste de Moral, remove 1 Pin antes da ação.
+\item \textbf{Intervenção do Oficial:} Tenente gasta 1 PC para ordenar Recuperar em unidade a até 15cm; útil se o Sargento morreu.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Dica:} 1-2 Pins vale arriscar atirar (pode remover 1 de graça); 3+ Pins, melhor Recuperar.
+}
+
+\cardcell{105}{297}{6}{ESQUADRÃO -- SLOTS (máx.\ 10)}{
+\textbf{Custo por arma:} Rifle/Pistola 1; SMG 2; LMG/BAR 4 (BAR 3).
+
+\textbf{Estrutura padrão:} 1 Sargento (SMG, gera 1 PC) + 1 Equipe LMG (Atirador + Municiador) + 7 Fuzileiros (Rifle).
+
+\textbf{Trocas táticas:}
+\begin{itemize}
+\item Bazooka (2H) -2 Fuzileiros | anti-tanque
+\item Médico (1H) -1 Fuzileiro, fora do limite de 10
+\item 2 Soldados de Assalto SMG -2 Fuzileiros | combate urbano
+\item até 2 Engenheiros substituem Fuzileiros
+\end{itemize}
+
+\begin{tabular}{@{}lcc@{}}
+\toprule
+ & \textbf{SMG} & \textbf{LMG/BAR}\\
+\midrule
+Alcance & 20cm & 60--80cm\\
+Ao mover & sem penal. & -1\\
+Pins causados & 1 & 2\\
+\bottomrule
+\end{tabular}
+}
+
+\cardcell{0}{149}{7}{ARMAS DE SUPORTE}{
+\textbf{LMG/Bazooka integradas:} LMG parada = força total, moveu = -1. Bazooka não atira se a unidade se moveu (arma pesada); contra veículo usa Pen da arma menos Prot do alvo.
+
+\textbf{Bazooka vs Infantaria:} 1D6 (4+ acerta) $\rightarrow$ 1D6 dano (1-3 mata 1 soldado; 4-6 mata 2 se houver 2º inimigo a até 5cm do alvo).
+
+\textbf{Granadas} (alcance 15cm, só vs Cobertura Pesada, 1/esquadrão/turno): mesmo perfil da Bazooka vs infantaria, e sempre gera 1D3 Pins (1-2=1 Pin, 3-4=2 Pins, 5-6=3 Pins).
+
+\textbf{Morteiros (Ajuste de Mira):} 1º tiro precisa de 6, 2º de 5+, 3º+ de 4+ (reseta para 6 se o alvo se mover).
+\begin{itemize}
+\item Leve (2H): 1D3 acertos, 1 Pin.
+\item Pesado (3H): 1D6 acertos, 2 Pins.
+\end{itemize}
+Sempre ignora cobertura.
+}
+
+\cardcell{105}{149}{8}{SNIPER \& HMG}{
+\textbf{Regra Geral -- Perda do Assistente} (LMG, Bazooka, HMG, Sniper, Morteiros): a arma nunca para de atirar, mas sofre -1 permanente no Acerto e perde a ordem Avançar (só Atirar parado ou Correr sem atirar). Habilidades do assistente (reroll, ajuste de mira facilitado etc.) somem.
+
+\textbf{HMG:} equipe de 2 (Atirador + Municiador), unidade de Suporte independente. Poder de Negação: acerto = 2 Pins automáticos. Arco de Fogo 45°; girar além custa +1 PC (Reposicionar). Sem PC de oficial: Autônoma, -1 no Acerto.
+
+\textbf{Sniper:} 2 homens (Atirador + Observador). Alcance 100cm, ignora penal.\ de longa distância. Se mover, -2 no Acerto.
+\begin{itemize}
+\item \textbf{Tiro Normal:} sequência padrão, 1 dado.
+\item \textbf{Tiro Selecionado:} qualquer miniatura visível, precisa 5+, morte instantânea, ignora save do Médico.
+\end{itemize}
+Observador vivo a até 2,5cm: 1 reroll de Acerto/turno. Observador morto: Regra Geral acima.
+}
+
+\end{cardpage}
+
+% ------------------------------------------------------------------
+% Folha 3 -- Cartao 9
+% ------------------------------------------------------------------
+\begin{cardpage}
+
+\cardcell{0}{297}{9}{COMANDO \& DOUTRINAS}{
+\textbf{Ativando Unidades de Suporte:} com PC de Oficial (Tenente 15cm / Capitão 30cm), ação normal (4+); sem PC, atira Autônoma (-1 no Acerto, não move).
+
+\textbf{QG (Oficial + Rádio/Ajudante):} gera PC pelo posto do Oficial sempre. Escudo de Estado-Maior: unidade amiga mais exposta a até 5cm pode ser alvejada no lugar do QG (exceto Sniper com Tiro Selecionado). Rádio morto = rede cai. Ajudante morto = Regra Geral do Assistente.
+
+\textbf{Rádio:} Oficial com Operador de Rádio vivo ignora o raio de comando (alcance infinito); se o operador morrer, a rede cai.
+
+\textbf{EUA (Fogo Superior e Mobilidade):} Rifles não sofrem -1 ao Avançar. Regular: Rádio grátis para o Tenente + re-rola Ajuste de Mira "1". Airborne: ignora o 1º Pin recebido por turno.
+
+\textbf{Alemanha (A Máquina de Serrar):} LMG/HMG recebem +1 dado; Municiador morto = -2 no Acerto (em vez de -1). Heer: perda do Sargento não gera Pin (promoção automática). Fallschirmjäger/SS: rola 2D6 em Moral/Assalto e fica com o melhor resultado.
+}
+
+\end{cardpage}
+
+\end{document}

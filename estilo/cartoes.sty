@@ -1,0 +1,92 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{estilo/cartoes}[2026/07/13 Layout de cartoes de referencia rapida Vanguarda 44]
+
+% Reaproveita as cores tematicas do livro (vinho, mostarda, laranja,
+% cinzachumbo, papel) sem reaproveitar a formatacao de pagina do livro.
+\RequirePackage{estilo/vanguarda44}
+
+% vanguarda44.sty ja carrega o pacote geometry (para as margens do livro);
+% aqui apenas redefinimos a geometria da folha para margem zero, sem
+% recarregar o pacote (evita "Option clash for package geometry").
+\geometry{a4paper,margin=0mm}
+\RequirePackage{tikz}
+\RequirePackage{array}
+\RequirePackage{enumitem}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+
+% Listas bem compactas, adequadas ao espaco reduzido do cartao
+\setlist[itemize]{leftmargin=2.6mm,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+\setlist[enumerate]{leftmargin=3.6mm,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+
+% Dimensoes do cartao (A6) e da celula da folha A4
+\newlength{\cardw}\setlength{\cardw}{105mm}
+\newlength{\cardh}\setlength{\cardh}{148mm}
+\newlength{\cardpad}\setlength{\cardpad}{3.2mm}
+
+% Caixa visual de um cartao: borda vinho, barra de titulo vinho, fundo papel
+\newtcolorbox{cartaobox}[1]{
+  enhanced,
+  colback=papel,
+  colframe=vinho,
+  boxrule=0.7pt,
+  arc=1.2mm,
+  width=\cardw-2\cardpad,
+  height=\cardh-2\cardpad,
+  valign=top,
+  left=2.3mm,right=2.3mm,top=1.4mm,bottom=1.4mm,
+  fonttitle=\bfseries\fontsize{9}{10}\selectfont,
+  coltitle=papel,
+  colbacktitle=vinho,
+  title={#1},
+  fontupper=\fontsize{7.1}{8.2}\selectfont,
+  boxsep=0pt,
+  top=1.6mm,
+}
+
+% Uma celula de cartao posicionada na folha.
+% #1 = x do canto superior esquerdo da celula (mm, a partir da esquerda)
+% #2 = y do canto superior esquerdo da celula (mm, a partir de baixo)
+% #3 = numero do cartao
+% #4 = titulo do cartao
+% #5 = conteudo do cartao
+\newcommand{\cardcell}[5]{%
+  \node[anchor=north west,inner sep=0pt] at (#1,#2) {%
+    \begin{minipage}[t][\cardh][t]{\cardw}
+      \centering
+      \begin{cartaobox}{#3.\ #4}
+      #5
+      \end{cartaobox}
+    \end{minipage}%
+  };
+}
+
+% Marca de corte (pequena cruz vazada) em um ponto de grade da folha
+\newcommand{\cropmark}[2]{%
+  \draw[line width=0.25pt,color=cinzachumbo] (#1,#2) ++(-2.2mm,0) -- ++(1.4mm,0);
+  \draw[line width=0.25pt,color=cinzachumbo] (#1,#2) ++(0.8mm,0) -- ++(1.4mm,0);
+  \draw[line width=0.25pt,color=cinzachumbo] (#1,#2) ++(0,-2.2mm) -- ++(0,1.4mm);
+  \draw[line width=0.25pt,color=cinzachumbo] (#1,#2) ++(0,0.8mm) -- ++(0,1.4mm);
+}
+
+% Marcas de corte nos 9 pontos de grade da folha (cantos dos 4 cartoes)
+\newcommand{\CropGrid}{%
+  \cropmark{0}{297}\cropmark{105}{297}\cropmark{210}{297}
+  \cropmark{0}{149}\cropmark{105}{149}\cropmark{210}{149}
+  \cropmark{0}{0}\cropmark{105}{0}\cropmark{210}{0}
+}
+
+% Uma folha A4 completa (fundo da tikzpicture) pronta para receber
+% ate 4 \cardcell e terminando com \CropGrid; fecha com \clearpage.
+\newenvironment{cardpage}{%
+  \begin{tikzpicture}[remember picture=false,x=1mm,y=1mm,inner sep=0pt]
+  \useasboundingbox (0,0) rectangle (210,297);
+}{%
+  \CropGrid
+  \end{tikzpicture}
+  \clearpage
+}
+
+\endinput

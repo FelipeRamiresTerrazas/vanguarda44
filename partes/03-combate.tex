@@ -7,24 +7,28 @@ O combate à distância é resolvido inteiramente pelo jogador Atacante em duas 
 
 \subsection{Passo A: Jogada de Acerto (Balística)}
 
-O atacante reúne seu Pool de Dados e rola. O valor base para acertar é 4+. Aplique os modificadores abaixo:
+O atacante reúne seu Pool de Dados e rola. O valor base para acertar é 4+. Aplique os modificadores abaixo --- todos são cumulativos entre si. Uma unidade em estado Abaixar (Down) concede -1 adicional a quem atira nela, empilhando com a cobertura do terreno que ela já tiver.
 
 \begin{center}
-\begin{tabular}{lc}
+\begin{tabular}{p{7cm}p{6.3cm}}
 \toprule
 Situação & Modificador \\
 \midrule
-Alvo em Campo Aberto & 0 (permanece 4+) \\
-Alvo em Cobertura Leve & -1 (precisa de 5+) \\
-Alvo em Cobertura Pesada & -2 (precisa de 6+) \\
-Atirador Moveu-se (Rifles/LMGs) & -1 na dificuldade \\
-Longa Distância (> metade do alcance) & -1 na dificuldade \\
+Campo Aberto & 0 (permanece 4+) \\
+Cobertura Leve (arbustos, cercas, floresta) & -1 (precisa de 5+) \\
+Cobertura Pesada (muros, ruínas, dentro de casas) & -2 (precisa de 6+) \\
+Bunker / Fortificação & -3 \\
+Atirador se moveu (ordem Avançar) & -1 na dificuldade \\
+Alvo a Longa Distância (> metade do alcance) & -1 na dificuldade \\
+Alvo em estado Abaixar (Down) & -1 na dificuldade \\
+Ocupação Parcial de Edifício, maioria dentro & Conta como Cobertura Pesada (-2) \\
+Ocupação Parcial de Edifício, maioria fora & Conta como Cobertura Leve ou Aberto (defensor escolhe em empate) \\
 \bottomrule
 \end{tabular}
 \end{center}
 
 \begin{nota}
-Um resultado natural de 6 no dado é sempre um acerto crítico, ignorando modificadores. Um resultado natural de 1 é sempre falha.
+Um resultado natural de 6 no dado é sempre um acerto crítico, ignorando modificadores. Um resultado natural de 1 é sempre falha. Todos os modificadores acima são cumulativos entre si --- por exemplo, um alvo em Cobertura Leve, a Longa Distância e em Abaixar soma -3 (precisa de 7+, ou seja, só acerta com 6 natural).
 \end{nota}
 
 \subsection{Passo B: Jogada de Dano (Letalidade)}

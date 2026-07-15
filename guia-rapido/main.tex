@@ -1,0 +1,225 @@
+\documentclass[10pt]{article}
+\usepackage{estilo/vanguarda44}
+\usepackage{colortbl}
+\usepackage{multicol}
+
+% vanguarda44.sty carrega geometry com margem 2.4cm, pensada para o livro
+% em coluna unica; aqui, com o guia em duas colunas, sobrescrevemos so
+% neste documento para aproveitar mais a largura da folha.
+\geometry{a4paper, left=1.6cm, right=1.6cm, top=2cm, bottom=2cm}
+
+\hypersetup{
+  pdftitle={Vanguarda 44 -- Guia Rapido de Inicio},
+  pdfauthor={Felipe Ramires Terrazas},
+}
+
+\fancyhead[L]{\small\color{cinzachumbo}Vanguarda 44 --- Guia Rápido de Início}
+
+\begin{document}
+
+\begin{center}
+{\bfseries\color{vinho}\Huge VANGUARDA 44\par}
+\vspace{6pt}
+{\color{mostarda}\Large Guia Rápido de Início\par}
+\vspace{8pt}
+{\itshape ``Tudo que você precisa para jogar sua primeira partida''\par}
+\end{center}
+
+\vspace{18pt}
+
+Este guia ensina o essencial do Vanguarda 44 em poucas páginas: como os turnos funcionam, como mover, atirar e reagir sob fogo, e como montar um esquadrão. Para regras avançadas, armas especiais em detalhe e listas de exército completas, consulte o \textit{Livro de Regras Vanguarda 44} --- este guia é o ponto de partida, não o manual completo.
+
+\begin{multicols}{2}
+
+\section{Visão Geral}
+
+Vanguarda 44 é um jogo de miniaturas da Segunda Guerra Mundial jogado em turnos. Cada jogador comanda um pelotão de infantaria, com apoio de armas especiais e, às vezes, veículos. O objetivo normalmente é cumprir um objetivo de cenário (capturar um ponto, destruir o inimigo, etc.) antes do adversário. Quase tudo se resolve rolando dados de 6 lados (d6).
+
+O jogo gira em torno de duas ideias centrais. A primeira são os \textbf{Pontos de Comando (PC)}, que determinam quantas unidades você consegue ativar e mandar agir em cada turno. A segunda são os \textbf{Marcadores de Stress (Pins)}: o medo se acumula, e uma unidade sob fogo pesado fica pior de mirar e pode travar de medo, mesmo sem sofrer baixas.
+
+\section{O Turno e os Pontos de Comando}
+
+Cada unidade em campo tem um Dado de Ordem de sua cor num saco comum. No início do turno, os jogadores se revezam sorteando um dado do saco: o jogador dono daquela cor ativa uma de suas unidades que ainda não agiu. Cada Sargento ou Oficial no campo gera Pontos de Comando (PC) --- um Sargento (suporte mostarda) gera 1, um Tenente (vinho) gera 2, um Capitão (laranja) gera 3. Times de suporte sem líder próprio, como uma Metralhadora Pesada, precisam que um Oficial próximo gaste 1 PC para ativá-los.
+
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llc@{}}
+\toprule
+\rowcolor{vinho}
+\textcolor{white}{\textbf{Posto}} & \textcolor{white}{\textbf{Cor}} & \textcolor{white}{\textbf{PC}} \\
+\midrule
+Sargento & Mostarda & 1 \\
+Tenente & Vinho & 2 \\
+Capitão & Laranja & 3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Quando ativada, uma unidade escolhe uma entre cinco ordens: Avançar (move e atira com -1), Correr (move o dobro, não atira), Atirar (parada, força total), Reagrupar (não move nem atira, tenta remover Stress) ou Abaixar (defesa máxima, não move nem atira). Para a ordem funcionar, role 1D6 contra um Teste de Ordem, com TN 3+ base, mais 1 por Marcador de Stress na unidade. Se falhar, a unidade vai para Abaixar e não ativa de novo neste turno.
+
+\begin{quote}
+\itshape Exemplo: uma unidade com 2 Pins precisa de 5+ para executar sua ordem (3 base + 2 de penalidade).
+\end{quote}
+
+\section{Movimento e Terreno}
+
+As distâncias são medidas em centímetros. A infantaria move 15cm (30cm correndo); veículos rodados movem 25cm (50cm correndo); veículos de esteira movem 20cm (40cm correndo).
+
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\rowcolor{vinho}
+\textcolor{white}{\textbf{Unidade}} & \textcolor{white}{\textbf{Padrão}} & \textcolor{white}{\textbf{Corrida}} \\
+\midrule
+Infantaria & 15cm & 30cm \\
+Veículo Rodado & 25cm & 50cm \\
+Veículo Esteira & 20cm & 40cm \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Em Terreno Difícil, como bosques densos ou lama, a infantaria não pode Correr, e veículos de esteira arriscam atolar --- role 1D6, e em um resultado de 1 o veículo perde o turno atolado. Estradas dão +5cm na corrida da infantaria e dobram o movimento de veículos, mas quem está nelas nunca conta como em cobertura. Obstáculos, como cercas e muros baixos, custam 5cm de movimento para atravessar.
+
+\section{Disparo}
+
+O disparo é resolvido em duas etapas rápidas, sempre pelo atacante --- o defensor não rola para ``se esquivar'', confia na cobertura e na qualidade da sua tropa.
+
+No \textbf{Passo A --- Acerto}, reúna 1 dado por arma atirando e role tudo junto. A base é 4+, e os modificadores dependem da cobertura do alvo e da situação do atirador e do alvo, sendo todos cumulativos entre si --- inclusive uma unidade em Abaixar, que agora concede -1 adicional a quem atira nela, empilhando com a cobertura do terreno.
+
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{2.8cm}p{2.2cm}@{}}
+\toprule
+\rowcolor{vinho}
+\textcolor{white}{\textbf{Situação}} & \textcolor{white}{\textbf{Modificador}} \\
+\midrule
+Campo Aberto & 0 \\
+Cobertura Leve & -1 \\
+Cobertura Pesada & -2 \\
+Bunker / Fortificação & -3 \\
+Atirador moveu & -1 \\
+Longa distância & -1 \\
+Alvo em Abaixar (novo) & -1 \\
+Ocup.\ parcial, maioria dentro & Cob.\ Pesada (-2) \\
+Ocup.\ parcial, maioria fora & Cob.\ Leve/Aberto \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Um resultado natural de 6 sempre acerta, e um resultado natural de 1 sempre erra.
+
+No \textbf{Passo B --- Dano}, role de novo apenas os dados que acertaram no Passo A. A TN para causar baixa depende da qualidade da tropa alvo.
+
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\rowcolor{vinho}
+\textcolor{white}{\textbf{Qualidade}} & \textcolor{white}{\textbf{TN Baixa}} \\
+\midrule
+Inexperiente & 3+ \\
+Regular & 4+ \\
+Veterana & 5+ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Contra veículos, some o valor de Penetração (Pen) da arma e subtraia a Proteção (Prot) do veículo: um resultado de 1 ou mais é ferimento.
+
+No \textbf{Passo C --- Consequências}, cada sucesso obtido no Passo B remove 1 miniatura do defensor. Além disso, se houve pelo menos 1 acerto no Passo A --- mesmo sem causar baixa --- a unidade alvo recebe 1 Marcador de Stress (armas como LMG e HMG causam 2).
+
+\begin{quote}
+\itshape Exemplo: 8 fuzileiros atiram contra um esquadrão regular em cobertura leve, sem se mover. Precisam de 5+; 3 acertam. Esses 3 dados rolam de novo, precisando de 4+; 1 causa baixa. O defensor remove 1 miniatura, e a unidade recebe 1 Marcador de Stress.
+\end{quote}
+
+\section{Moral e Marcadores de Stress (Pins)}
+
+Cada Pin acumulado dá -1 no Acerto da unidade. Para ativar uma unidade que já tem Pins, role 2D6 e compare contra a Moral da unidade menos os Pins acumulados: se o resultado for igual ou menor, a ativação funciona normalmente. A Moral varia por qualidade de tropa, e é justamente esse valor que define quantos Pins uma unidade aguenta antes de entrar em pânico.
+
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\rowcolor{vinho}
+\textcolor{white}{\textbf{Qualidade}} & \textcolor{white}{\textbf{Moral}} & \textcolor{white}{\textbf{Foge com}} \\
+\midrule
+Inexperiente & 8 & 8 Pins \\
+Regular & 9 & 9 Pins \\
+Veterana & 10 & 10 Pins \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Se os Pins de uma unidade igualarem sua Moral, ela entra em pânico e é removida do jogo.
+
+Para remover Pins, existem duas opções: a própria unidade pode receber a ordem Reagrupar, que não permite mover nem atirar naquele turno mas rola 1D6 para determinar quantos Pins são removidos; ou, se o Sargento da unidade já morreu, um Tenente a até 15cm pode gastar 1 PC para ordenar Reagrupar nela.
+
+\section{Montando seu Esquadrão}
+
+Vanguarda 44 não usa soma de pontos por miniatura --- em vez disso, cada Esquadrão de Infantaria tem um limite fixo de 10 ``espaços de dado''.
+
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\rowcolor{vinho}
+\textcolor{white}{\textbf{Arma}} & \textcolor{white}{\textbf{Espaços}} \\
+\midrule
+Rifle / Pistola & 1 \\
+SMG & 2 \\
+LMG / BAR & 4 (3 se BAR) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A formação padrão é 1 Sargento com SMG, mais 1 Equipe LMG de dois homens, mais 7 Fuzileiros --- totalizando 10 homens e 10 espaços.
+
+Antes da partida, é possível trocar Fuzileiros por especialistas: uma Bazooka custa 2 espaços, um Médico custa 1, e assim por diante. Essa troca cria uma escolha tática real entre ter mais soldados em campo (mais ``vidas'' para absorver baixas) ou armas melhores (mais poder de fogo, com uma unidade mais frágil).
+
+\section{Armas Especiais (resumo)}
+
+Antes do resumo de cada arma, a tabela abaixo reúne os alcances de referência para consulta rápida durante a partida.
+
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\rowcolor{vinho}
+\textcolor{white}{\textbf{Arma}} & \textcolor{white}{\textbf{Alcance}} \\
+\midrule
+SMG & 20cm \\
+Rifle & 60cm \\
+LMG/BAR & 60--80cm \\
+Granada & 15cm (só Cob.\ Pesada) \\
+Bazooka vs Infantaria & Curto/Contato \\
+Sniper & 100cm (ignora LD) \\
+Morteiro Leve & 30--60cm \\
+Morteiro Pesado & 50cm--Infinito \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A \textbf{LMG} atira com força total se estiver parada, ou com -1 se a unidade se moveu. A \textbf{Bazooka} não atira se a unidade se moveu, e contra infantaria tem um modo simplificado: role 1D6 (4+ acerta) e depois 1D6 de dano, onde 1-3 mata 1 soldado e 4-6 mata 2, desde que haja outro inimigo a até 5cm do alvo. A \textbf{HMG} é especialmente perigosa para o moral inimigo: qualquer acerto já gera 2 Marcadores de Stress automáticos, independentemente do dano causado. A dupla de \textbf{Sniper} (Atirador e Observador) tem alcance de 100cm e ignora a penalidade de longa distância; seu Tiro Selecionado, que precisa de 5+, escolhe qualquer soldado inimigo visível e o mata instantaneamente. O \textbf{Morteiro} precisa de Ajuste de Mira: o primeiro tiro exige um 6, o segundo 5+, e do terceiro em diante 4+, reiniciando essa progressão sempre que o alvo se mover.
+
+Uma regra vale para todas essas armas de suporte: se o Assistente da equipe morrer, a arma nunca para de atirar, mas passa a sofrer -1 permanente no Acerto e perde o direito de mover e atirar no mesmo turno.
+
+\section{Modo Rápido (partidas de até 45 minutos)}
+
+Para uma partida mais curta, algumas regras podem ser simplificadas de saída. Os Esquadrões usam de 6 a 8 espaços de dado, em vez dos 10 completos, e não há Fogo Dividido nem Fogo e Movimento --- a unidade inteira Avança, Corre ou Atira como um bloco único. O disparo de todas as armas de tiro direto passa a usar um único perfil simplificado: role 1D6 (4+ acerta) seguido de 1D6 de dano, onde 1-3 mata 1 soldado e 4-6 mata 2, desde que haja outro alvo a até 5cm --- o mesmo sistema que a Bazooka já usa contra infantaria no jogo completo. Morteiros disparam direto, sem Ajuste de Mira, aplicando um -1 fixo no lugar dele.
+
+A Moral também fica mais simples: toda unidade foge ao acumular 6 Pins, não importa sua qualidade de tropa. A partida tem limite de 6 turnos, e vence quem tiver cumprido mais objetivos --- ou, em caso de empate, quem tiver menos baixas.
+
+\bigskip
+\noindent Isso é tudo que você precisa saber para começar. Bons combates, soldado --- e quando quiser se aprofundar em granadas, engenheiros, doutrinas nacionais e cenários completos, consulte o \textit{Livro de Regras Vanguarda 44}.
+
+\end{multicols}
+
+\end{document}

@@ -12,3 +12,10 @@
 *.nav
 *.snm
 *.vrb
+
+# Build de preview do VS Code (LaTeX Workshop) para os documentos
+# independentes -- o PDF oficial de cada um tem nome proprio
+# (Vanguarda_44_Cartoes_Referencia.pdf / Vanguarda_44_Guia_Rapido.pdf),
+# gerado via -jobname no terminal.
+cartoes/main.pdf
+guia-rapido/main.pdf

@@ -25,12 +25,12 @@
 \item \textbf{Avançar} -- move e atira com -1
 \item \textbf{Correr} -- move o dobro, não atira
 \item \textbf{Atirar} -- parado, força total
-\item \textbf{Reagrupar} -- não move/atira, 1D6 = Pins removidos
+\item \textbf{Reagrupar} -- não move/atira, 1D6 = níveis de Stress removidos
 \item \textbf{Emboscada} -- espera reação do inimigo
 \item \textbf{Abaixar} -- defesa máxima, não move/atira
 \end{itemize}
 
-\textbf{Teste de Ordem:} 1D6 $\geq$ TN (3+ base, +1 por Pin). Falha: vai para Abaixar, não ativa de novo neste turno.
+\textbf{Teste de Ordem:} 1D6 $\geq$ TN (3+ base, fixo, não escala com Stress). Falha: vai para Abaixar, não ativa de novo neste turno.
 
 \textbf{Comando:}
 \begin{itemize}
@@ -79,26 +79,21 @@ Inexperiente 3+; Regular 4+; Veterano 5+.
 Veículo: D6 + Pen da arma - Prot do alvo $\geq$1 fere.
 
 \textbf{Passo C -- Stress:}
-1+ acerto sofrido = 1 Pin. Armas de Supressão (LMG/HMG) = 2 Pins.
+1+ acerto de arma leve = sobe 1 nível no dado de Stress. Armas de Suporte/HE (LMG/HMG/explosivos) = sobe 2 níveis.
 }
 
-\cardcell{105}{149}{4}{CQC \& MORAL (PINS)}{
+\cardcell{105}{149}{4}{CQC \& MORAL (DADO DE STRESS)}{
 \textbf{Corpo a Corpo:} ambos rolam 2D6 + 1D6/modelo na unidade. Acerto 4+, ferimento direto, sem save. Quem causar mais ferimentos vence; perdedor destruído; vencedor consolida 2cm.
 
-\textbf{Recebendo Stress:} 1 Pin se atingido por arma leve (rifle/pistola/SMG); 2 Pins se atingido por LMG/HMG/HE (morteiro, tanque, bazuca).
+\textbf{Recebendo Stress:} arma leve (rifle/pistola/SMG) com 1+ acerto = sobe 1 nível; LMG/HMG/HE (morteiro, tanque, bazuca) = sobe 2 níveis. Nível máx.\ 6. Veterano ignora o 1º nível que subiria a cada turno.
 
-\textbf{Efeitos:} -1 no Acerto por cada Pin. Ativar com Pins: 2D6 $\leq$ Moral - Pins. Falha: unidade vai para Abaixar.
-
-\textbf{Tabela Moral:}
-\begin{tabular}{@{}lc@{}}
-\toprule
-\textbf{Qualidade} & \textbf{Foge com}\\
-\midrule
-Inexperiente & 8 Pins\\
-Regular & 9 Pins\\
-Veterano & 10 Pins\\
-\bottomrule
-\end{tabular}
+\textbf{Efeitos por Nível:}
+\begin{itemize}
+\item Nível 1-2: -5cm de movimento.
+\item Nível 3-5: -10cm de movimento, -1 no Acerto, -10cm de alcance.
+\item Nível 6: pânico, unidade removida da mesa (exceto doutrina Fallschirmjäger/SS).
+\end{itemize}
+Sem teste de ativação extra: efeitos acima aplicam direto.
 }
 
 \end{cardpage}
@@ -110,13 +105,9 @@ Veterano & 10 Pins\\
 
 \cardcell{0}{297}{5}{RECUPERAÇÃO DE STRESS}{
 \begin{itemize}
-\item \textbf{Ordem Recuperar (Rally):} custo 1 PC do Sargento (ou Tenente perto); não move/atira; role 1D6 = Pins removidos; sai do Abaixar.
-\item \textbf{Bravura sob Fogo:} unidade com Pins tenta Tiro/Movimento normalmente; se passar no Teste de Moral, remove 1 Pin antes da ação.
+\item \textbf{Ordem Recuperar (Rally):} custo 1 PC do Sargento (ou Tenente perto); não move/atira; role 1D6 e reduza o Nível de Stress nesse valor (mín.\ 0, remove o dado); sai do Abaixar.
 \item \textbf{Intervenção do Oficial:} Tenente gasta 1 PC para ordenar Recuperar em unidade a até 15cm; útil se o Sargento morreu.
 \end{itemize}
-
-\vspace{4pt}
-\textbf{Dica:} 1-2 Pins vale arriscar atirar (pode remover 1 de graça); 3+ Pins, melhor Recuperar.
 }
 
 \cardcell{105}{297}{6}{ESQUADRÃO -- SLOTS (máx.\ 10)}{
@@ -138,7 +129,7 @@ Veterano & 10 Pins\\
 \midrule
 Alcance & 20cm & 60--80cm\\
 Ao mover & sem penal. & -1\\
-Pins causados & 1 & 2\\
+Stress causado & Sobe 1 & Sobe 2\\
 \bottomrule
 \end{tabular}
 }
@@ -148,12 +139,12 @@ Pins causados & 1 & 2\\
 
 \textbf{Bazooka vs Infantaria:} 1D6 (4+ acerta) $\rightarrow$ 1D6 dano (1-3 mata 1 soldado; 4-6 mata 2 se houver 2º inimigo a até 5cm do alvo).
 
-\textbf{Granadas} (alcance 15cm, só vs Cobertura Pesada, 1/esquadrão/turno): mesmo perfil da Bazooka vs infantaria, e sempre gera 1D3 Pins (1-2=1 Pin, 3-4=2 Pins, 5-6=3 Pins).
+\textbf{Granadas} (alcance 15cm, só vs Cobertura Pesada, 1/esquadrão/turno): mesmo perfil da Bazooka vs infantaria, e sempre sobe 1D3 níveis de Stress (1-2=sobe 1, 3-4=sobe 2, 5-6=sobe 3).
 
 \textbf{Morteiros (Ajuste de Mira):} 1º tiro precisa de 6, 2º de 5+, 3º+ de 4+ (reseta para 6 se o alvo se mover).
 \begin{itemize}
-\item Leve (2H): 1D3 acertos, 1 Pin.
-\item Pesado (3H): 1D6 acertos, 2 Pins.
+\item Leve (2H): 1D3 acertos, sobe 1 nível de Stress.
+\item Pesado (3H): 1D6 acertos, sobe 2 níveis de Stress.
 \end{itemize}
 Sempre ignora cobertura.
 }
@@ -161,7 +152,7 @@ Sempre ignora cobertura.
 \cardcell{105}{149}{8}{SNIPER \& HMG}{
 \textbf{Regra Geral -- Perda do Assistente} (LMG, Bazooka, HMG, Sniper, Morteiros): a arma nunca para de atirar, mas sofre -1 permanente no Acerto e perde a ordem Avançar (só Atirar parado ou Correr sem atirar). Habilidades do assistente (reroll, ajuste de mira facilitado etc.) somem.
 
-\textbf{HMG:} equipe de 2 (Atirador + Municiador), unidade de Suporte independente. Poder de Negação: acerto = 2 Pins automáticos. Arco de Fogo 45°; girar além custa +1 PC (Reposicionar). Sem PC de oficial: Autônoma, -1 no Acerto.
+\textbf{HMG:} equipe de 2 (Atirador + Municiador), unidade de Suporte independente. Poder de Negação: acerto = sobe 2 níveis no dado de Stress automaticamente. Arco de Fogo 45°; girar além custa +1 PC (Reposicionar). Sem PC de oficial: Autônoma, -1 no Acerto.
 
 \textbf{Sniper:} 2 homens (Atirador + Observador). Alcance 100cm, ignora penal.\ de longa distância. Se mover, -2 no Acerto.
 \begin{itemize}
@@ -185,9 +176,9 @@ Observador vivo a até 2,5cm: 1 reroll de Acerto/turno. Observador morto: Regra 
 
 \textbf{Rádio:} Oficial com Operador de Rádio vivo ignora o raio de comando (alcance infinito); se o operador morrer, a rede cai.
 
-\textbf{EUA (Fogo Superior e Mobilidade):} Rifles não sofrem -1 ao Avançar. Regular: Rádio grátis para o Tenente + re-rola Ajuste de Mira "1". Airborne: ignora o 1º Pin recebido por turno.
+\textbf{EUA (Fogo Superior e Mobilidade):} Rifles não sofrem -1 ao Avançar. Regular: Rádio grátis para o Tenente + re-rola Ajuste de Mira "1". Airborne: ignora os 2 primeiros níveis de Stress por turno (1 de Veterano + 1 da doutrina).
 
-\textbf{Alemanha (A Máquina de Serrar):} LMG/HMG recebem +1 dado; Municiador morto = -2 no Acerto (em vez de -1). Heer: perda do Sargento não gera Pin (promoção automática). Fallschirmjäger/SS: rola 2D6 em Moral/Assalto e fica com o melhor resultado.
+\textbf{Alemanha (A Máquina de Serrar):} LMG/HMG recebem +1 dado; Municiador morto = -2 no Acerto (em vez de -1). Heer: perda do Sargento não sobe o dado de Stress (promoção automática). Fallschirmjäger/SS: ao chegar no Nível 6, role 1D6 -- com 4+ a unidade permanece em campo (sofrendo as penalidades do Nível 6) em vez de ser removida, até reduzir ao menos 1 nível.
 }
 
 \cardcell{105}{297}{10}{ALCANCES \& MODIFICADORES}{

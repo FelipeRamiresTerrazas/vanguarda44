@@ -45,7 +45,7 @@ Quando ativada, uma unidade tenta executar uma das seguintes ordens:
   \item \textbf{Avançar}: mover e depois atirar com eficácia reduzida (-1 para acertar).
   \item \textbf{Correr}: mover o dobro da distância, mas não pode atirar.
   \item \textbf{Atirar}: ficar parado ou pivotar e atirar com eficácia total.
-  \item \textbf{Reagrupar (Rally)}: tentar remover Marcadores de Stress (veja Parte III, Moral e Supressão).
+  \item \textbf{Reagrupar (Rally)}: tentar reduzir o Nível de Stress (veja Parte III, Moral e Stress).
   \item \textbf{Emboscada (Ambush)}: esperar que uma unidade inimiga se mova ou atire para então reagir.
   \item \textbf{Abaixar (Down)}: ficar prostrado para defesa máxima. Uma unidade em Abaixar concede -1 adicional no dado de quem atira nela, empilhando com a cobertura do terreno que ela já tiver (veja Parte III, Sequência de Disparo).
 \end{itemize}
@@ -54,11 +54,13 @@ Quando ativada, uma unidade tenta executar uma das seguintes ordens:
 
 Para executar uma ordem com sucesso, a unidade deve passar em um Teste de Ordem: role 1D6 contra um Número Alvo (TN).
 
-\textbf{TN base}: 3+ para uma unidade padrão sem Marcadores de Stress.
-
-\textbf{Modificador}: +1 ao TN para cada Marcador de Stress que a unidade possua.
+\textbf{TN base}: 3+ para qualquer unidade, independentemente do seu Nível de Stress.
 
 \textbf{Resultado}: se a rolagem atingir ou exceder o TN, a ordem é executada. Se falhar, o dado da unidade é imediatamente colocado na posição Abaixar, e a unidade não pode ser ativada novamente neste turno.
+
+\begin{nota}
+Os efeitos do Stress (movimento, precisão e alcance) são aplicados diretamente conforme o Nível do dado vermelho --- veja Parte III, Moral e Stress --- e não alteram este teste.
+\end{nota}
 
 \section{Identificação de Comando (Suportes de Base)}
 

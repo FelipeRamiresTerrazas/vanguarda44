@@ -35,7 +35,7 @@ Este guia ensina o essencial do Vanguarda 44 em poucas páginas: como os turnos 
 
 Vanguarda 44 é um jogo de miniaturas da Segunda Guerra Mundial jogado em turnos. Cada jogador comanda um pelotão de infantaria, com apoio de armas especiais e, às vezes, veículos. O objetivo normalmente é cumprir um objetivo de cenário (capturar um ponto, destruir o inimigo, etc.) antes do adversário. Quase tudo se resolve rolando dados de 6 lados (d6).
 
-O jogo gira em torno de duas ideias centrais. A primeira são os \textbf{Pontos de Comando (PC)}, que determinam quantas unidades você consegue ativar e mandar agir em cada turno. A segunda são os \textbf{Marcadores de Stress (Pins)}: o medo se acumula, e uma unidade sob fogo pesado fica pior de mirar e pode travar de medo, mesmo sem sofrer baixas.
+O jogo gira em torno de duas ideias centrais. A primeira são os \textbf{Pontos de Comando (PC)}, que determinam quantas unidades você consegue ativar e mandar agir em cada turno. A segunda é o \textbf{Dado de Stress}: o medo se acumula, e uma unidade sob fogo pesado fica pior de mirar, mais lenta e pode entrar em pânico, mesmo sem sofrer baixas.
 
 \section{O Turno e os Pontos de Comando}
 
@@ -56,11 +56,7 @@ Capitão & Laranja & 3 \\
 \end{tabular}
 \end{center}
 
-Quando ativada, uma unidade escolhe uma entre cinco ordens: Avançar (move e atira com -1), Correr (move o dobro, não atira), Atirar (parada, força total), Reagrupar (não move nem atira, tenta remover Stress) ou Abaixar (defesa máxima, não move nem atira). Para a ordem funcionar, role 1D6 contra um Teste de Ordem, com TN 3+ base, mais 1 por Marcador de Stress na unidade. Se falhar, a unidade vai para Abaixar e não ativa de novo neste turno.
-
-\begin{quote}
-\itshape Exemplo: uma unidade com 2 Pins precisa de 5+ para executar sua ordem (3 base + 2 de penalidade).
-\end{quote}
+Quando ativada, uma unidade escolhe uma entre cinco ordens: Avançar (move e atira com -1), Correr (move o dobro, não atira), Atirar (parada, força total), Reagrupar (não move nem atira, tenta reduzir o Nível de Stress) ou Abaixar (defesa máxima, não move nem atira). Para a ordem funcionar, role 1D6 contra um Teste de Ordem com TN 3+ --- esse valor é fixo e não piora com o Nível de Stress da unidade (o Stress já penaliza a unidade diretamente, veja Seção 5). Se falhar, a unidade vai para Abaixar e não ativa de novo neste turno.
 
 \section{Movimento e Terreno}
 
@@ -131,34 +127,36 @@ Veterana & 5+ \\
 
 Contra veículos, some o valor de Penetração (Pen) da arma e subtraia a Proteção (Prot) do veículo: um resultado de 1 ou mais é ferimento.
 
-No \textbf{Passo C --- Consequências}, cada sucesso obtido no Passo B remove 1 miniatura do defensor. Além disso, se houve pelo menos 1 acerto no Passo A --- mesmo sem causar baixa --- a unidade alvo recebe 1 Marcador de Stress (armas como LMG e HMG causam 2).
+No \textbf{Passo C --- Consequências}, cada sucesso obtido no Passo B remove 1 miniatura do defensor. Além disso, se houve pelo menos 1 acerto no Passo A --- mesmo sem causar baixa --- a unidade alvo sobe 1 nível no seu dado de Stress (armas como LMG e HMG sobem 2 níveis).
 
 \begin{quote}
-\itshape Exemplo: 8 fuzileiros atiram contra um esquadrão regular em cobertura leve, sem se mover. Precisam de 5+; 3 acertam. Esses 3 dados rolam de novo, precisando de 4+; 1 causa baixa. O defensor remove 1 miniatura, e a unidade recebe 1 Marcador de Stress.
+\itshape Exemplo: 8 fuzileiros atiram contra um esquadrão regular em cobertura leve, sem se mover. Precisam de 5+; 3 acertam. Esses 3 dados rolam de novo, precisando de 4+; 1 causa baixa. O defensor remove 1 miniatura, e a unidade sobe 1 nível no dado de Stress.
 \end{quote}
 
-\section{Moral e Marcadores de Stress (Pins)}
+\section{Moral e o Dado de Stress}
 
-Cada Pin acumulado dá -1 no Acerto da unidade. Para ativar uma unidade que já tem Pins, role 2D6 e compare contra a Moral da unidade menos os Pins acumulados: se o resultado for igual ou menor, a ativação funciona normalmente. A Moral varia por qualidade de tropa, e é justamente esse valor que define quantos Pins uma unidade aguenta antes de entrar em pânico.
+O medo de morrer é representado por um único dado d6 vermelho colocado ao lado de cada unidade sob pressão, mostrando seu Nível de Stress atual, de 1 a 6. Uma unidade sem stress simplesmente não tem dado nenhum ao seu lado --- é a forma mais rápida de enxergar, só de olhar a mesa, quais unidades estão sob pressão.
+
+Uma unidade sobe 1 nível sempre que sofre pelo menos 1 acerto de arma leve (rifle, pistola, SMG), e sobe 2 níveis se for atingida por uma arma de suporte (LMG, HMG) ou por uma arma explosiva (HE --- tanques, bazucas, morteiros). O nível nunca passa de 6, e tropas Veteranas ignoram o primeiro nível que subiriam a cada turno.
+
+Diferente de outros jogos do gênero, não existe um teste extra de ativação para unidades estressadas: os efeitos abaixo são aplicados diretamente, sem nenhuma rolagem adicional.
 
 \begin{center}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}lcc@{}}
+\begin{tabular}{@{}lp{4.4cm}@{}}
 \toprule
 \rowcolor{vinho}
-\textcolor{white}{\textbf{Qualidade}} & \textcolor{white}{\textbf{Moral}} & \textcolor{white}{\textbf{Foge com}} \\
+\textcolor{white}{\textbf{Nível}} & \textcolor{white}{\textbf{Efeito}} \\
 \midrule
-Inexperiente & 8 & 8 Pins \\
-Regular & 9 & 9 Pins \\
-Veterana & 10 & 10 Pins \\
+1--2 & -5cm no movimento (Padrão e Corrida) \\
+3--5 & -10cm no movimento, -1 no Acerto, -10cm de alcance efetivo \\
+6 & Pânico: a unidade bate em retirada e é removida do jogo \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-Se os Pins de uma unidade igualarem sua Moral, ela entra em pânico e é removida do jogo.
-
-Para remover Pins, existem duas opções: a própria unidade pode receber a ordem Reagrupar, que não permite mover nem atirar naquele turno mas rola 1D6 para determinar quantos Pins são removidos; ou, se o Sargento da unidade já morreu, um Tenente a até 15cm pode gastar 1 PC para ordenar Reagrupar nela.
+Para reduzir o Nível de Stress, existem duas opções: a própria unidade pode receber a ordem Reagrupar, que não permite mover nem atirar naquele turno mas rola 1D6 para determinar quantos níveis são reduzidos (removendo o dado se chegar a 0); ou, se o Sargento da unidade já morreu, um Tenente a até 15cm pode gastar 1 PC para ordenar Reagrupar nela, seguindo a mesma regra.
 
 \section{Montando seu Esquadrão}
 
@@ -207,7 +205,7 @@ Morteiro Pesado & 50cm--Infinito \\
 \end{tabular}
 \end{center}
 
-A \textbf{LMG} atira com força total se estiver parada, ou com -1 se a unidade se moveu. A \textbf{Bazooka} não atira se a unidade se moveu, e contra infantaria tem um modo simplificado: role 1D6 (4+ acerta) e depois 1D6 de dano, onde 1-3 mata 1 soldado e 4-6 mata 2, desde que haja outro inimigo a até 5cm do alvo. A \textbf{HMG} é especialmente perigosa para o moral inimigo: qualquer acerto já gera 2 Marcadores de Stress automáticos, independentemente do dano causado. A dupla de \textbf{Sniper} (Atirador e Observador) tem alcance de 100cm e ignora a penalidade de longa distância; seu Tiro Selecionado, que precisa de 5+, escolhe qualquer soldado inimigo visível e o mata instantaneamente. O \textbf{Morteiro} precisa de Ajuste de Mira: o primeiro tiro exige um 6, o segundo 5+, e do terceiro em diante 4+, reiniciando essa progressão sempre que o alvo se mover.
+A \textbf{LMG} atira com força total se estiver parada, ou com -1 se a unidade se moveu. A \textbf{Bazooka} não atira se a unidade se moveu, e contra infantaria tem um modo simplificado: role 1D6 (4+ acerta) e depois 1D6 de dano, onde 1-3 mata 1 soldado e 4-6 mata 2, desde que haja outro inimigo a até 5cm do alvo. A \textbf{HMG} é especialmente perigosa para o moral inimigo: qualquer acerto já sobe 2 níveis no dado de Stress do alvo automaticamente, independentemente do dano causado. A dupla de \textbf{Sniper} (Atirador e Observador) tem alcance de 100cm e ignora a penalidade de longa distância; seu Tiro Selecionado, que precisa de 5+, escolhe qualquer soldado inimigo visível e o mata instantaneamente. O \textbf{Morteiro} precisa de Ajuste de Mira: o primeiro tiro exige um 6, o segundo 5+, e do terceiro em diante 4+, reiniciando essa progressão sempre que o alvo se mover.
 
 Uma regra vale para todas essas armas de suporte: se o Assistente da equipe morrer, a arma nunca para de atirar, mas passa a sofrer -1 permanente no Acerto e perde o direito de mover e atirar no mesmo turno.
 
@@ -215,7 +213,7 @@ Uma regra vale para todas essas armas de suporte: se o Assistente da equipe morr
 
 Para uma partida mais curta, algumas regras podem ser simplificadas de saída. Os Esquadrões usam de 6 a 8 espaços de dado, em vez dos 10 completos, e não há Fogo Dividido nem Fogo e Movimento --- a unidade inteira Avança, Corre ou Atira como um bloco único. O disparo de todas as armas de tiro direto passa a usar um único perfil simplificado: role 1D6 (4+ acerta) seguido de 1D6 de dano, onde 1-3 mata 1 soldado e 4-6 mata 2, desde que haja outro alvo a até 5cm --- o mesmo sistema que a Bazooka já usa contra infantaria no jogo completo. Morteiros disparam direto, sem Ajuste de Mira, aplicando um -1 fixo no lugar dele.
 
-A Moral também fica mais simples: toda unidade foge ao acumular 6 Pins, não importa sua qualidade de tropa. A partida tem limite de 6 turnos, e vence quem tiver cumprido mais objetivos --- ou, em caso de empate, quem tiver menos baixas.
+A Moral segue a mesma regra do jogo completo: toda unidade que atingir o Nível 6 de Stress entra em pânico e é removida, não importa sua qualidade de tropa (ignore exceções de doutrina neste modo). A partida tem limite de 6 turnos, e vence quem tiver cumprido mais objetivos --- ou, em caso de empate, quem tiver menos baixas.
 
 \bigskip
 \noindent Isso é tudo que você precisa saber para começar. Bons combates, soldado --- e quando quiser se aprofundar em granadas, engenheiros, doutrinas nacionais e cenários completos, consulte o \textit{Livro de Regras Vanguarda 44}.

@@ -49,7 +49,7 @@ Contra veículos, o TN de dano depende do valor de Penetração (Pen) da arma ve
 
 \textbf{Médico}: se houver um médico na unidade ou próximo dela, tente o salvamento agora (veja Parte IV, Médico de Combate).
 
-\textbf{Aplicação de Stress}: se a unidade sofreu pelo menos 1 acerto (mesmo sem causar baixa), ela recebe 1 Marcador de Stress. Armas com a regra ``Supressão'' (LMG/HMG) causam 2 Marcadores.
+\textbf{Aplicação de Stress}: se a unidade sofreu pelo menos 1 acerto de Arma Leve (mesmo sem causar baixa), ela sobe 1 nível no dado de Stress. Armas de Suporte (LMG/HMG) ou Armas Explosivas (HE) sobem 2 níveis (veja Parte III, Moral e Stress).
 
 \section{Combate Corpo a Corpo (CQC)}
 
@@ -63,49 +63,34 @@ O CQC ocorre quando uma unidade executa uma ordem Avançar ou Correr bem-sucedid
 
 \textbf{Resultado}: o lado que causou mais ferimentos vence o combate. O lado perdedor é destruído, e o vencedor pode consolidar 2cm.
 
-\section{Moral e Supressão (Sistema de Pins)}
+\section{Moral e Stress (Sistema do Dado Vermelho)}
 
-No campo de batalha, o medo de morrer é tão impactante quanto o ferimento físico. Vanguarda 44 representa isso através de Marcadores de Stress (Pins).
+O medo de morrer é representado por um único dado d6 vermelho colocado ao lado de cada unidade sob pressão, mostrando seu Nível de Stress atual (1 a 6). Uma unidade sem stress não tem dado nenhum ao seu lado.
 
 \subsection{Recebendo Stress}
 
-\textbf{1 Pin}: se a unidade for atingida por disparos de Armas Leves (Rifles, Pistolas, SMG) e sofrer pelo menos 1 acerto.
+\begin{itemize}[leftmargin=1.2cm]
+  \item \textbf{Armas Leves} (Rifles, Pistolas, SMG) com pelo menos 1 acerto: sobe 1 nível.
+  \item \textbf{Armas de Suporte} (LMG, HMG) ou \textbf{Armas Explosivas} (HE --- tanques, bazucas, morteiros): sobe 2 níveis.
+  \item O nível nunca ultrapassa 6.
+  \item \textbf{Veteranos} ignoram o 1º nível de Stress que receberiam a cada turno (a primeira vez que subiria o dado naquele turno, simplesmente não sobe).
+\end{itemize}
 
-\textbf{2 Pins}: se a unidade for atingida por Armas de Suporte (LMG, HMG) ou Armas Explosivas (HE --- tanques, bazucas, morteiros).
+\subsection{Efeitos por Nível}
+
+\begin{itemize}[leftmargin=1.2cm]
+  \item \textbf{Nível 1-2}: -5cm no movimento (Padrão e Corrida).
+  \item \textbf{Nível 3-5}: -10cm no movimento (em vez de -5cm), -1 no Teste de Acerto, e -10cm no alcance efetivo (perde a faixa de Longo Alcance).
+  \item \textbf{Nível 6}: a unidade entra em pânico, bate em retirada para fora da mesa e é removida do jogo (ver exceção da doutrina Fallschirmjäger/SS, Parte VII).
+\end{itemize}
 
 \begin{nota}
-Os marcadores são cumulativos. Uma unidade pode acumular vários Pins ao longo dos turnos se não for reorganizada.
+Não há mais teste de ativação para unidades com Stress --- os efeitos acima são aplicados diretamente, sem rolagem adicional.
 \end{nota}
 
-\subsection{Efeitos do Stress}
+\section{Recuperação de Stress}
 
-\textbf{Precisão}: a unidade sofre -1 no Teste de Acerto para cada Pin que possuir.
-
-\textbf{Verificação de Moral (Ordem)}: para ativar uma unidade com Pins, o jogador deve primeiro lançar 2D6. O resultado deve ser igual ou menor que a Moral da unidade (veja tabela abaixo) subtraída do número de Pins.
-
-\textbf{Sucesso}: a unidade remove 1 Pin automaticamente e age normalmente (ainda sofrendo penalidade de tiro pelos Pins restantes).
-
-\textbf{Falha}: a unidade entra em estado ``Cabeça Baixa'' (Down). Ganha defesa extra, mas não pode mover ou atirar neste turno.
-
-\subsection{Colapso (Fuga)}
-
-Se em qualquer momento o número de Pins de uma unidade igualar ou exceder o seu valor base de Moral, a unidade entra em pânico e é removida da mesa.
-
-\begin{center}
-\begin{tabular}{lcc}
-\toprule
-Qualidade da Tropa & Valor de Moral Base & Foge com... \\
-\midrule
-Inexperiente (Volkssturm) & 8 & 8 Pins \\
-Regular (Heer / US Army) & 9 & 9 Pins \\
-Veterano (Paraquedistas / SS) & 10 & 10 Pins \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\section{Recuperação de Stress (Rally)}
-
-Existem três maneiras de uma unidade recuperar a compostura e remover Marcadores de Stress.
+Existem duas maneiras de uma unidade reduzir seu Nível de Stress.
 
 \subsection{A Ordem ``Recuperar'' (Rally)}
 
@@ -113,16 +98,8 @@ Existem três maneiras de uma unidade recuperar a compostura e remover Marcadore
 
 \textbf{Ação}: a unidade NÃO se move e NÃO atira neste turno.
 
-\textbf{Resolução}: role 1D6. O resultado é o número de Marcadores de Stress removidos imediatamente. A unidade também deixa o estado Abaixar, se estiver nele.
-
-\subsection{Bravura sob Fogo}
-
-Se a unidade tiver Stress mas o jogador decidir dar uma ordem de Tiro ou Movimento (em vez de Recuperar), e o Teste de Moral for bem-sucedido, remova 1 Marcador de Stress antes de realizar a ação.
+\textbf{Resolução}: role 1D6 e reduza o Nível de Stress nesse valor (mínimo 0 --- remova o dado da mesa se chegar a 0).
 
 \subsection{Intervenção do Oficial}
 
-O Tenente pode gastar 1 dos seus PC para ordenar ``Recuperar'' a uma unidade a até 15cm de distância, seguindo as regras de 9.1. Útil quando o Sargento da unidade morreu.
-
-\begin{nota}
-Com 1 ou 2 Pins, vale a pena arriscar e atirar (se passar no teste, remove 1 Pin de graça). Com 3+ Pins, geralmente compensa mais gastar o turno reagrupando.
-\end{nota}
+O Tenente pode gastar 1 PC para ordenar ``Recuperar'' em uma unidade a até 15cm, seguindo as mesmas regras acima. Útil quando o Sargento da unidade morreu.

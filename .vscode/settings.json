@@ -1,6 +1,6 @@
 {
   "latex-workshop.latex.env": {
-    "TEXINPUTS": "..;"
+    "TEXINPUTS": "../;../../;../../../;"
   },
   "latex-workshop.latex.tools": [
     {
@@ -14,7 +14,7 @@
         "%DIR%/%DOCFILE%.tex"
       ],
       "env": {
-        "TEXINPUTS": "..;"
+        "TEXINPUTS": "../;../../;../../../;"
       }
     }
   ],

@@ -19,3 +19,6 @@
 # gerado via -jobname no terminal.
 cartoes/main.pdf
 guia-rapido/main.pdf
+
+# Configuracoes locais do Claude Code, especificas de cada maquina/usuario
+.claude/settings.local.json

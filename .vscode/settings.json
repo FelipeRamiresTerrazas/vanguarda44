@@ -1,4 +1,11 @@
 {
+  "cSpell.language": "en,pt,pt_BR",
+  "cSpell.words": [
+    "Vanguarda",
+    "Fallschirmjäger",
+    "Panzerschreck",
+    "Auftragstaktik"
+  ],
   "latex-workshop.latex.env": {
     "TEXINPUTS": "../;../../;../../../;"
   },

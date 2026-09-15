@@ -2,8 +2,15 @@
 \ProvidesPackage{estilo/cartoes}[2026/07/13 Layout de cartoes de referencia rapida Vanguarda 44]
 
 % Reaproveita as cores tematicas do livro (vinho, mostarda, laranja,
-% cinzachumbo, papel) sem reaproveitar a formatacao de pagina do livro.
+% cinzachumbo, papel, ja apontando pra paleta militar via \colorlet em
+% vanguarda44.sty) sem reaproveitar a formatacao de pagina do livro.
 \RequirePackage{estilo/vanguarda44}
+
+% vanguarda44.sty aplica \pagecolor e uma textura de fundo em toda pagina;
+% os cartoes ficam de fora disso de proposito (fundo branco/neutro puro),
+% entao desfazemos as duas aqui.
+\ClearShipoutPictureBG
+\pagecolor{white}
 
 % vanguarda44.sty ja carrega o pacote geometry (para as margens do livro);
 % aqui apenas redefinimos a geometria da folha para margem zero, sem
